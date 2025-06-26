@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\ProgrammingStudy\\TCPServer\\TCPServer\\TCPServer.csproj": {}
+    "C:\\Users\\제5강의실-25\\Desktop\\Unity\\250623\\Robotics-5gi\\TCPServer\\TCPServer\\TCPServer.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\ProgrammingStudy\\TCPServer\\TCPServer\\TCPServer.csproj": {
+    "C:\\Users\\제5강의실-25\\Desktop\\Unity\\250623\\Robotics-5gi\\TCPServer\\TCPServer\\TCPServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\ProgrammingStudy\\TCPServer\\TCPServer\\TCPServer.csproj",
+        "projectUniqueName": "C:\\Users\\제5강의실-25\\Desktop\\Unity\\250623\\Robotics-5gi\\TCPServer\\TCPServer\\TCPServer.csproj",
         "projectName": "TCPServer",
-        "projectPath": "C:\\Projects\\ProgrammingStudy\\TCPServer\\TCPServer\\TCPServer.csproj",
-        "packagesPath": "C:\\Users\\교수\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\ProgrammingStudy\\TCPServer\\TCPServer\\obj\\",
+        "projectPath": "C:\\Users\\제5강의실-25\\Desktop\\Unity\\250623\\Robotics-5gi\\TCPServer\\TCPServer\\TCPServer.csproj",
+        "packagesPath": "C:\\Users\\제5강의실-25\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\제5강의실-25\\Desktop\\Unity\\250623\\Robotics-5gi\\TCPServer\\TCPServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\교수\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\제5강의실-25\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

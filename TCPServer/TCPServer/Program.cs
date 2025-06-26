@@ -36,7 +36,7 @@ namespace TCPServer
             Console.WriteLine("서버가 시작되었습니다.");
             Console.WriteLine("클라이언트의 연결을 대기합니다...");
 
-            while(true)
+            while (true)
             {
                 // 3. 클라이언트의 접속을 비동기적으로 기다림
                 TcpClient client = await server.AcceptTcpClientAsync();
@@ -61,7 +61,7 @@ namespace TCPServer
             // 2. PLC 연결해지: "Disconnect" -> MxComponent.Close()
             // 3. 데이터 요청: "Request,read,X0,2" -> MxComponent.ReadDeviceBlock(X0, 2, out data[0]);
             //                 "Request,write,X10,1,240" -> MxComponent.ReadDeviceBlock(X10, 1, out data[0]);
-            while((byteRead = await stream.ReadAsync(buffer, 0, buffer.Length)) != 0)
+            while ((byteRead = await stream.ReadAsync(buffer, 0, buffer.Length)) != 0)
             {
                 // "Connect", "DisConnect", "Request,read,X0,2"
                 string dataStr = Encoding.UTF8.GetString(buffer, 0, byteRead);
@@ -80,11 +80,11 @@ namespace TCPServer
         // "Connect", "DisConnect", "Request,read,X0,2"
         private static string FSM(string dataStr)
         {
-            if(dataStr.Contains("Connect"))
+            if (dataStr.Contains("Connect"))
             {
                 return Connect();
             }
-            else if(dataStr.Contains("Disconnect"))
+            else if (dataStr.Contains("Disconnect"))
             {
                 return Disconnect();
             }
@@ -92,7 +92,7 @@ namespace TCPServer
             {
                 return ReadDeviceBlock(dataStr);
             }
-            else if(dataStr.Contains("Request,write"))
+            else if (dataStr.Contains("Request,write"))
             {
                 return WriteDeviceBlock(dataStr);
             }

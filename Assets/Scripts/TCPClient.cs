@@ -112,6 +112,7 @@ public class TCPClient : MonoBehaviour
             towerManager.isRedLampOn      = yData[10] is '1' ? true : false;
             towerManager.isYellowLampOn   = yData[11] is '1' ? true : false;
             towerManager.isGreenLampOn    = yData[12] is '1' ? true : false;
+            UIController.instance.isRobotOn = yData[13] is '1' ? true : false;
         }
     }
 
