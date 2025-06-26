@@ -15,34 +15,42 @@ namespace TCPServer
         static ActUtlType64 mxComponent;
         static State state;
 
-        // 1:N 비동기통신
+        // 로그 덮어쓰기를 위한 잠금 객체
+        private static readonly object _consoleLock = new object();
+
         static async Task Main()
         {
-            // 콘솔 프로그램 종료 이벤트 등록
-            //Console.CancelKeyPress += new ConsoleCancelEventHandler(ExitHandler);
-
             // MxComponent 초기설정
             mxComponent = new ActUtlType64();
             mxComponent.ActLogicalStationNumber = 1;
             state = State.DISCONNECTED;
 
-            //SyncUpdate();
-            // 1. 서버 객체 선언
             IPAddress addr = IPAddress.Parse("127.0.0.1");
             TcpListener server = new TcpListener(addr, 12345);
-
-            // 2. 서버 실행
             server.Start();
-            Console.WriteLine("서버가 시작되었습니다.");
+
+            Console.Clear(); // 콘솔 화면을 깨끗이 지웁니다.
+            Console.WriteLine("PLC 통신 서버가 시작되었습니다.");
             Console.WriteLine("클라이언트의 연결을 대기합니다...");
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine(); // 한 줄 띄우기
+            // 로그가 표시될 초기 위치 설정
+            Console.WriteLine("수신: (대기 중)");
+            Console.WriteLine("송신: (대기 중)");
 
             while (true)
             {
-                // 3. 클라이언트의 접속을 비동기적으로 기다림
                 TcpClient client = await server.AcceptTcpClientAsync();
-                Console.WriteLine("클라이언트가 연결되었습니다.");
 
-                // 4. 데이터 통신 -> 다른 스레드 사용
+                lock (_consoleLock)
+                {
+                    // 커서를 기존 로그 아래로 이동하여 연결 메시지 출력
+                    Console.SetCursorPosition(0, 8);
+                    Console.WriteLine($"클라이언트 연결됨: {((IPEndPoint)client.Client.RemoteEndPoint).Address}");
+                    // 다시 로그 표시 위치로 커서 초기화
+                    Console.SetCursorPosition(0, 4);
+                }
+
                 Task.Run(() => HandleClientAync(client));
             }
         }
@@ -50,107 +58,151 @@ namespace TCPServer
         static async Task HandleClientAync(TcpClient client)
         {
             NetworkStream stream = client.GetStream();
-
             Byte[] buffer = new byte[1024];
-
             int byteRead;
 
-            // 클라이언트가 보낸 데이터를 계속 읽음
-            // <Unity 클라이언트가 보낸 데이터 형식>
-            // 1. PLC 연결: "Connect" -> MxComponent.Open()
-            // 2. PLC 연결해지: "Disconnect" -> MxComponent.Close()
-            // 3. 데이터 요청: "Request,read,X0,2" -> MxComponent.ReadDeviceBlock(X0, 2, out data[0]);
-            //                 "Request,write,X10,1,240" -> MxComponent.ReadDeviceBlock(X10, 1, out data[0]);
-            while ((byteRead = await stream.ReadAsync(buffer, 0, buffer.Length)) != 0)
+            const int RECV_LINE = 4; // 수신 로그는 5번째 줄에
+            const int SEND_LINE = 5; // 송신 로그는 6번째 줄에
+
+            try
             {
-                // "Connect", "DisConnect", "Request,read,X0,2"
-                string dataStr = Encoding.UTF8.GetString(buffer, 0, byteRead);
-                Console.WriteLine($"수신: {dataStr}");
+                bool isConnectedToServer = true;
 
-                // FSM(finite state machine): 유한상태머신
-                string result = FSM(dataStr); // result -> Unity
+                while (isConnectedToServer && (byteRead = await stream.ReadAsync(buffer, 0, buffer.Length)) != 0)
+                {
+                    string dataStr = Encoding.UTF8.GetString(buffer, 0, byteRead);
 
-                byte[] responseData = Encoding.UTF8.GetBytes(result);
+                    // 수신 로그 덮어쓰기
+                    lock (_consoleLock)
+                    {
+                        // 1. 수신 로그 줄로 커서 이동
+                        Console.SetCursorPosition(0, RECV_LINE);
+                        // 2. 해당 줄을 공백으로 채워서 완전히 비움
+                        Console.Write(new string(' ', Console.WindowWidth - 1));
+                        // 3. 다시 커서를 맨 앞으로 이동
+                        Console.SetCursorPosition(0, RECV_LINE);
+                        // 4. 새로운 로그 출력
+                        Console.Write($"수신: {dataStr}");
+                    }
 
-                await stream.WriteAsync(responseData, 0, responseData.Length);
-                Console.WriteLine($"송신: {result}");
+                    string result = FSM(dataStr);
+
+                    if (result.Contains("Disconnected"))
+                    {
+                        isConnectedToServer = false;
+                    }
+
+                    byte[] responseData = Encoding.UTF8.GetBytes(result);
+                    await stream.WriteAsync(responseData, 0, responseData.Length);
+
+                    // [수정] 송신 로그 덮어쓰기
+                    lock (_consoleLock)
+                    {
+                        // 1. 송신 로그 줄로 커서 이동
+                        Console.SetCursorPosition(0, SEND_LINE);
+                        // 2. 해당 줄을 공백으로 채워서 완전히 비움
+                        Console.Write(new string(' ', Console.WindowWidth - 1));
+                        // 3. 다시 커서를 맨 앞으로 이동
+                        Console.SetCursorPosition(0, SEND_LINE);
+                        // 4. 새로운 로그 출력
+                        Console.Write($"송신: {result}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                lock (_consoleLock)
+                {
+                    Console.SetCursorPosition(0, 9);
+                    Console.WriteLine($"클라이언트 연결 끊김: {ex.Message}".PadRight(Console.WindowWidth - 1));
+                    Console.SetCursorPosition(0, SEND_LINE + 1); // 커서를 로그 아래로 이동
+                }
+            }
+            finally
+            {
+                // --- [중요] 클라이언트와의 TCP 연결을 명시적으로 닫음 ---
+                client.Close();
+                lock (_consoleLock)
+                {
+                    Console.SetCursorPosition(0, 10);
+                    Console.WriteLine($"클라이언트 소켓 연결 해제됨.".PadRight(Console.WindowWidth - 1));
+                }
             }
         }
 
-        // "Connect", "DisConnect", "Request,read,X0,2"
+
         private static string FSM(string dataStr)
         {
             if (dataStr.Contains("Connect"))
             {
                 return Connect();
             }
+            // 이 부분이 올바르게 Disconnect() 함수를 호출하는지 확인
             else if (dataStr.Contains("Disconnect"))
             {
-                return Disconnect();
+                return Disconnect(); // 이 함수가 mxComponent.Close()를 호출함
             }
-            else if (dataStr.Contains("Request,read")) // "Request,read,X10,1,write,X0,1,7"
+            else if (dataStr.StartsWith("Request,"))
             {
-                return ReadDeviceBlock(dataStr);
-            }
-            else if (dataStr.Contains("Request,write"))
-            {
-                return WriteDeviceBlock(dataStr);
+                string[] commands = dataStr.Substring("Request,".Length).Split(',');
+                List<string> responseParts = new List<string>();
+                int i = 0;
+                while (i < commands.Length)
+                {
+                    string commandType = commands[i];
+                    if (commandType.Equals("read", StringComparison.OrdinalIgnoreCase))
+                    {
+                        string address = commands[i + 1];
+                        string blockCnt = commands[i + 2];
+                        string result = ReadDeviceBlock($"Request,read,{address},{blockCnt}");
+                        responseParts.Add(result);
+                        i += 3;
+                    }
+                    else if (commandType.Equals("write", StringComparison.OrdinalIgnoreCase))
+                    {
+                        string address = commands[i + 1];
+                        string blockCnt = commands[i + 2];
+                        string value = commands[i + 3];
+                        string result = WriteDeviceBlock($"Request,write,{address},{blockCnt},{value}");
+                        responseParts.Add(result);
+                        i += 4;
+                    }
+                    else
+                    {
+                        responseParts.Add("Fail: Unknown command");
+                        break;
+                    }
+                }
+                return string.Join(",", responseParts);
             }
             else
             {
-                return "Fail";
+                return "Fail: Invalid request format";
             }
-        }
-
-        // 콘솔프로그램 종료시 이벤트
-        static void ExitHandler(object sender, ConsoleCancelEventArgs args)
-        {
-            Console.WriteLine("프로그램 종료 중...");
-
-            Disconnect();
         }
 
         private static string WriteDeviceBlock(string dataStr)
         {
-            // 문자열 파싱: "Request,write,X10,2,355,366" -> { Request, read, X10, 2, 355, 366 }
-            // 시작버튼, 정지버튼, 긴급정지버튼 -> 7(111)
-            string[] data = dataStr.Split(",");
+            string[] data = dataStr.Split(',');
             string address = data[2];
-            int blockCnt;
-            bool isInt = int.TryParse(data[3], out blockCnt);
-
-            if (!isInt)
+            if (!int.TryParse(data[3], out int blockCnt))
                 return "Request Error: BlockCnt 문자열 오류";
 
-            int value;
-            isInt = int.TryParse(data[4], out value);
-
-            if (!isInt)
+            if (!int.TryParse(data[4], out int value))
                 return "Request Error: Device Value 문자열 오류";
 
             int[] values = new int[blockCnt];
             values[0] = value;
-
             int iRet = mxComponent.WriteDeviceBlock(address, blockCnt, ref values[0]);
-            if (iRet == 0)
-            {
-                return $"Write,{address},{blockCnt},{value}";
-            }
-            else
-            {
-                return "0x" + Convert.ToString(iRet, 16);
-            }
+            if (iRet == 0) return $"Write,{address},{blockCnt},{value}";
+            else return "0x" + Convert.ToString(iRet, 16);
         }
 
         private static string ReadDeviceBlock(string dataStr)
         {
-            // 문자열 파싱: "Request,read,X0,1" -> { Request, read, X0, 1 }  -> { Request, read, X10, 1, write, X0, 1, 7}
-            string[] data = dataStr.Split(",");
+            string[] data = dataStr.Split(',');
             string address = data[2];
-            int blockCnt;
-            bool isInt = int.TryParse(data[3], out blockCnt);
-
-            if (!isInt)
+            if (!int.TryParse(data[3], out int blockCnt))
                 return "Request Error: BlockCnt 문자열 오류";
 
             int[] newData = new int[blockCnt];
@@ -158,21 +210,16 @@ namespace TCPServer
             if (iRet == 0)
             {
                 string str = "";
-                for (int i = 0; i < newData.Length; i++)
-                {
-                    str += newData[i] + ", ";
-                }
-
-                return $"Read,{address},{blockCnt},{str}"; // "Read,X0,1,35" ex) 센서정보들
+                for (int i = 0; i < newData.Length; i++) str += newData[i] + ",";
+                str = str.TrimEnd(','); // 마지막 쉼표 제거
+                return $"Read,{address},{blockCnt},{str}";
             }
-            else
-            {
-                return "0x" + Convert.ToString(iRet, 16);
-            }
+            else return "0x" + Convert.ToString(iRet, 16);
         }
 
         private static string Disconnect()
         {
+            // --- [중요] PLC 객체 해제 로직 ---
             int iRet = mxComponent.Close();
             if (iRet == 0)
             {
@@ -181,7 +228,8 @@ namespace TCPServer
             }
             else
             {
-                return "0x" + Convert.ToString(iRet, 16);
+                // 16진수 오류 코드를 반환
+                return "Disconnect Error: 0x" + Convert.ToString(iRet, 16);
             }
         }
 
@@ -193,45 +241,7 @@ namespace TCPServer
                 state = State.CONNECTED;
                 return "Connected";
             }
-            else
-            {
-                return "0x" + Convert.ToString(iRet, 16);
-            }
-        }
-
-        // 1:1 동기통신용
-        private static void SyncUpdate()
-        {
-            // 서버 소켓 생성 + 바인딩(특정 아이피와 포트할당)
-            TcpListener server = new TcpListener(IPAddress.Any, 12345);
-
-            server.Start();
-
-            Console.WriteLine("서버 시작");
-
-            // 1. 클라이언트의 연결을 대기
-            TcpClient client = server.AcceptTcpClient();
-
-            Console.WriteLine("클라이언트 연결됨.\n");
-
-            // 2. 네트워크의 스트림 가져오기
-            NetworkStream stream = client.GetStream();
-
-            while (true)
-            {
-                // 3. 클라이언트로 부터 데이터 읽기
-                byte[] buffer = new byte[1024];
-                int bytesRead = stream.Read(buffer, 0, buffer.Length);
-
-                // 4. 버퍼에 저장한 데이터를 인코딩(UTF8)
-                string data = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-                Console.WriteLine("클라이언트: " + data);
-
-                // 5. 답장 쓰기(데이터 전송하기)
-                string response = "서버: 데이터 받음\n";
-                byte[] responseData = Encoding.UTF8.GetBytes(response);
-                stream.Write(responseData, 0, responseData.Length);
-            }
+            else return "0x" + Convert.ToString(iRet, 16);
         }
     }
 }
