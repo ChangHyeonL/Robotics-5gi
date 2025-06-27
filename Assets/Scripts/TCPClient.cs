@@ -179,7 +179,6 @@ public class TCPClient : MonoBehaviour
 
             // xDevice Á¤º¸ PLC -> UNITY
             cylinders[0].isFrontLimitSWON = binaryX[0] == '1';
-            cylinders[0].isFrontLimitSWON = binaryX[0] == '1';
             cylinders[0].isBackLimitSWON = binaryX[1] == '1';
             cylinders[1].isFrontLimitSWON = binaryX[2] == '1';
             cylinders[1].isBackLimitSWON = binaryX[3] == '1';
@@ -231,7 +230,21 @@ public class TCPClient : MonoBehaviour
         char power = (isPowerOnCliked ? '1' : '0');
         char stop = (isStopCliked ? '1' : '0');
         char eStop = (isEStopCliked ? '1' : '0');
-        string binaryStr = $"{eStop}{stop}{power}";
+        
+        
+        char cylAFrontLS = (cylinders[0].isFrontEnd ? '1' : '0');
+        char cylABackLS = (cylinders[0].isFrontEnd ? '1' : '0');
+
+        char cylBFrontLS = (cylinders[0].isFrontEnd ? '1' : '0');
+        char cylBBackLS = (cylinders[0].isFrontEnd ? '1' : '0');
+
+        char cylCFrontLS = (cylinders[0].isFrontEnd ? '1' : '0');
+        char cylCBackLS = (cylinders[0].isFrontEnd ? '1' : '0');
+
+        char cylDFrontLS = (cylinders[0].isFrontEnd ? '1' : '0');
+        char cylDBackLS = (cylinders[0].isFrontEnd ? '1' : '0');
+
+        string binaryStr = $"{cylDBackLS}{cylDFrontLS}{cylCBackLS}{cylCFrontLS}{cylBBackLS}{cylBFrontLS}{cylABackLS}{cylAFrontLS}" + $"{eStop}{stop}{power}";
         int decimalX = Convert.ToInt32(binaryStr, 2);
         string writeX = $"write,{X_START_UNITY2PLC},{X_BLOCKCNT_UNITY2PLC},{decimalX}";
 

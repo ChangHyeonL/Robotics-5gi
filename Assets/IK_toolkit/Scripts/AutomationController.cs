@@ -40,15 +40,22 @@ public class AutomationController : MonoBehaviour
 
     }
 
-
+    public Gripper gripper;
     IEnumerator Sequence(List<UIController.TeachData> datas)
     {
         isRobotRunning = true;
 
         foreach (var data in datas)
         {
-            yield return MoveRobotTo(data.pos, data.rot, data.duration);
-            
+            if (data.isGripperOn)
+                gripper.SetChild();
+                // ikToolkit.ik
+
+            yield return MoveRobotTo(data, data.duration);
+
+            if (data.isGripperOn)
+                gripper.SetChild();
+
         }
 
         // teachDatas 리스트의 마지막 step정보를 UIController에 적용
@@ -102,20 +109,24 @@ public class AutomationController : MonoBehaviour
     }
 
     // 함수의 오버로드
-    private IEnumerator MoveRobotTo(Vector3 pos, Vector3 rot, float time)
+    private IEnumerator MoveRobotTo(UIController.TeachData data, float time)
     {
         Vector3 startPos = ikToolkit.ik.position;
         Quaternion startRot = ikToolkit.ik.rotation;
-        Quaternion endRot = Quaternion.Euler(rot.x, rot.y, rot.z);
+        Quaternion endRot = Quaternion.Euler(data.rot.x, data.rot.y, data.rot.z);
 
         elapsedTime = 0;
 
         while (elapsedTime < time)
+
         {
+            if (data.isGripperOn)
+                gripper.SetChild();
+
             elapsedTime += Time.deltaTime;
 
             // end-effector를 target위치로 Lerp를 사용해 time동안 이동
-            ikToolkit.ik.position = Vector3.Lerp(startPos, pos, elapsedTime / time);
+            ikToolkit.ik.position = Vector3.Lerp(startPos, data.pos, elapsedTime / time);
 
             // end-effector를 target위치로 Slerp를 사용해 time동안 회전
             ikToolkit.ik.rotation = Quaternion.Slerp(startRot, endRot, elapsedTime / time);

@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\TCPClient.cs" />
     <Compile Include="Assets\IK_toolkit\Scripts\IK_toolkit.cs" />
     <Compile Include="Assets\Scripts\MovementEx.cs" />
+    <Compile Include="Assets\Scripts\Gripper.cs" />
     <Compile Include="Assets\Scripts\Conveyor.cs" />
     <Compile Include="Assets\Scripts\RayCamera.cs" />
     <Compile Include="Assets\Scripts\Cylinder.cs" />

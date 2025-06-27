@@ -476,7 +476,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 742929138}
         m_TargetAssemblyTypeName: Conveyor, Assembly-CSharp
-        m_MethodName: RotateConveyorCW
+        m_MethodName: RotateConveyor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1964,9 +1964,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MxComponent, Assembly-CSharp
-        m_MethodName: OnPowerBtnClkEvent
+      - m_Target: {fileID: 1168601630}
+        m_TargetAssemblyTypeName: TCPClient, Assembly-CSharp
+        m_MethodName: OnPowerBtnToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2666,9 +2666,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MxComponent, Assembly-CSharp
-        m_MethodName: OnEStopBtnClkEvent
+      - m_Target: {fileID: 1168601630}
+        m_TargetAssemblyTypeName: TCPClient, Assembly-CSharp
+        m_MethodName: OnEStopBtnToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2881,7 +2881,7 @@ Transform:
   m_GameObject: {fileID: 377714732}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.91, y: -1.6396768, z: 1.77}
+  m_LocalPosition: {x: -3.726, y: -1.6396768, z: 2.572}
   m_LocalScale: {x: 0.35019377, y: 0.12157509, z: 0.35019377}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8965,8 +8965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947572b796d96f146889a77716e248cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  request: 
-  response: 
   logTxt: {fileID: 682934599}
   cylinders:
   - {fileID: 726699711}
@@ -10989,7 +10987,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 742929138}
         m_TargetAssemblyTypeName: Conveyor, Assembly-CSharp
-        m_MethodName: RotateConveyorCCW
+        m_MethodName: RotateConveyor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11229,9 +11227,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 742929138}
-        m_TargetAssemblyTypeName: Conveyor, Assembly-CSharp
-        m_MethodName: StopConveyor
-        m_Mode: 1
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopCoroutine
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13230,6 +13228,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806805533}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1848615926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6804869149533534338, guid: 1a05f0f78e0243e449a72c71ead1a830, type: 3}
+  m_PrefabInstance: {fileID: 1896505968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1848615932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848615926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f48ca3296d558d46860e9f16290da95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isObjectLocated: 1
+  touchObj: {fileID: 0}
 --- !u!1 &1866269551
 GameObject:
   m_ObjectHideFlags: 0
@@ -13538,6 +13555,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UR16e
       objectReference: {fileID: 0}
+    - target: {fileID: 4377615826873283621, guid: 1a05f0f78e0243e449a72c71ead1a830, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4899553817383042656, guid: 1a05f0f78e0243e449a72c71ead1a830, type: 3}
+      propertyPath: gripper
+      value: 
+      objectReference: {fileID: 1848615932}
     - target: {fileID: 5862662221665097726, guid: 1a05f0f78e0243e449a72c71ead1a830, type: 3}
       propertyPath: m_LocalPosition.x
       value: 223
@@ -13581,7 +13606,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6804869149533534338, guid: 1a05f0f78e0243e449a72c71ead1a830, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1848615932}
   m_SourcePrefab: {fileID: 100100000, guid: 1a05f0f78e0243e449a72c71ead1a830, type: 3}
 --- !u!4 &1896505969 stripped
 Transform:
@@ -14584,9 +14612,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MxComponent, Assembly-CSharp
-        m_MethodName: OnStopBtnClkEvent
+      - m_Target: {fileID: 1168601630}
+        m_TargetAssemblyTypeName: TCPClient, Assembly-CSharp
+        m_MethodName: OnStopBtnToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
