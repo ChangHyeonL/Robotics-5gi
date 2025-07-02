@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define UNITY_MASTER // UNITY_SLAVE 전처리기: 빌드 시 코드를 선택할 수 있는 기능
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
@@ -6,7 +8,6 @@ using System.Text;
 using System.Threading; // CancellationToken을 위해 추가
 using System.Threading.Tasks;
 using TMPro;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 // TCPSever(콘솔프로그램)와 함께 사용하는 TCPClient
@@ -53,12 +54,6 @@ public class TCPClient : MonoBehaviour
     [Header("X디바이스용")]
     public Sensor 근접센서;
     public Sensor 금속센서;
-
-
-    void Start()
-    {
-
-    }
 
     // 연결 시작 
     private void StartConnection()
@@ -112,6 +107,9 @@ public class TCPClient : MonoBehaviour
 
     private void Update()
     {
+        // #define에서 UNITY_MASTER로 빌드시 실행되는 부분
+        // DB로 넘겨줘야할 데이터: newRequest, responseToProcess
+#if UNITY_MASTER
         // 1. (메인 스레드) 네트워크로 보낼 요청 문자열 생성
         if (isConnected)
         {
@@ -140,6 +138,24 @@ public class TCPClient : MonoBehaviour
         {
             ResponseData(responseToProcess);
         }
+
+        UpdateToDataBase();
+
+        // #define에서 UNITY_SLAVE로 빌드시 실행되는 부분
+        // DB에서 가져와야 할 데이터: newRequest, responseToProcess
+#elif UNITY_SLAVE
+    // Firebase DB로 부터 데이터를 가져와서, 설비에 적용해줘야 함.
+    
+#endif
+    }
+
+    /// <summary>
+    /// Firebase DB에 newRequest, responseToProcess 변수를 업데이트
+    /// </summary>
+    /// <exception cref="NotImplementedException"></exception>
+    private void UpdateToDataBase()
+    {
+        throw new NotImplementedException();
     }
 
     private void ResponseData(string response)

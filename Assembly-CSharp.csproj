@@ -62,34 +62,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\SlerpRotation.cs" />
+    <Compile Include="Assets\Scripts\MPS\MxComponent.cs" />
     <Compile Include="Assets\Scripts\CubeManager1.cs" />
+    <Compile Include="Assets\Scripts\MPS\Sensor.cs" />
     <Compile Include="Assets\Scripts\FirebaseDBEx.cs" />
     <Compile Include="Assets\Scripts\FirebaseAuthManager.cs" />
     <Compile Include="Assets\Scripts\CubeManager.cs" />
-    <Compile Include="Assets\Scripts\Sensor.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\MPS\TowerManager.cs" />
     <Compile Include="Assets\IK_toolkit\Scripts\AutomationController.cs" />
     <Compile Include="Assets\Scripts\BulletinBoardManager.cs" />
     <Compile Include="Assets\IK_toolkit\Scripts\UIController.cs" />
-    <Compile Include="Assets\Scripts\TCPClient.cs" />
     <Compile Include="Assets\Scripts\LibrarySystem.cs" />
     <Compile Include="Assets\IK_toolkit\Scripts\IK_toolkit.cs" />
     <Compile Include="Assets\Scripts\MovementEx.cs" />
-    <Compile Include="Assets\Scripts\Gripper.cs" />
-    <Compile Include="Assets\Scripts\Conveyor.cs" />
+    <Compile Include="Assets\Scripts\MPS\TCPClientWithDB.cs" />
     <Compile Include="Assets\Scripts\RayCamera.cs" />
-    <Compile Include="Assets\Scripts\Cylinder.cs" />
-    <Compile Include="Assets\Scripts\Dragger.cs" />
     <Compile Include="Assets\Scripts\LerpMovement2.cs" />
+    <Compile Include="Assets\Scripts\MPS\Conveyor.cs" />
     <Compile Include="Assets\Scripts\MovementEx2.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\MPS\TCPClient.cs" />
     <Compile Include="Assets\Scripts\NavAgent.cs" />
-    <Compile Include="Assets\Scripts\TowerManager.cs" />
     <Compile Include="Assets\Scripts\LampManager.cs" />
     <Compile Include="Assets\Scripts\LerpRotation.cs" />
     <Compile Include="Assets\Scripts\LerpMovement.cs" />
     <Compile Include="Assets\Scripts\MovePlayer.cs" />
-    <Compile Include="Assets\Scripts\MxComponent.cs" />
+    <Compile Include="Assets\Scripts\MPS\Dragger.cs" />
+    <Compile Include="Assets\Scripts\MPS\Gripper.cs" />
+    <Compile Include="Assets\Scripts\MPS\Cylinder.cs" />
+    <Compile Include="Assets\Scripts\MPS\FirebaseAuthManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
