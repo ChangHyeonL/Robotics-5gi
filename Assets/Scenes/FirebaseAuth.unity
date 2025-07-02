@@ -2799,6 +2799,8 @@ MonoBehaviour:
   signInPanel: {fileID: 1784067748}
   signUpPanel: {fileID: 2068552949}
   verificationPanel: {fileID: 1914044613}
+  bulletinBoard: {fileID: 0}
+  bulletinBoardPanel: {fileID: 0}
   signInEmailInput: {fileID: 213406699}
   signInPasswordInput: {fileID: 666955857}
   signUpEmailInput: {fileID: 1946184883}

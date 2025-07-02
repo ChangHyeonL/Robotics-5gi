@@ -12,7 +12,6 @@ public class FirebaseAuthManager : MonoBehaviour
 {
     public static FirebaseAuthManager instance;
 
-
     public GameObject signInPanel;
     public GameObject signUpPanel;
     public GameObject verificationPanel;
