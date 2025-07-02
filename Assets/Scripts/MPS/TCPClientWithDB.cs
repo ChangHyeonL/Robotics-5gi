@@ -106,6 +106,7 @@ public class TCPClientWithDB : MonoBehaviour
     // 연결 해제
     private void StopConnection()
     {
+#if UNITY_MASTER
         // 이미 연결이 끊겼거나 해제 과정 중이면 중복 실행 방지
         if (!isConnected && (_communicationTask == null || _communicationTask.IsCompleted))
         {
@@ -135,6 +136,17 @@ public class TCPClientWithDB : MonoBehaviour
                 _cts.Cancel();
             }
         });
+#elif UNITY_SLAVE
+        if (dBInfo != null)
+        {
+            dBInfo.isConnected = "False";
+            print("DB 연결이 종료되었습니다.");
+        }
+        else
+        {
+            print("이미 DB 연결해제 상태입니다.");
+        }
+#endif
     }
 
     private void Update()
