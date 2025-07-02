@@ -5,7 +5,6 @@ using TMPro;
 using System;
 using System.Collections;
 using System.Threading.Tasks;
-using Google.MiniJSON;
 using System.Collections.Generic;
 
 public class BulletinBoardManager : MonoBehaviour

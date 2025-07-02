@@ -11,7 +11,6 @@ using TMPro;
 using UnityEngine;
 using Firebase;
 using Firebase.Database;
-using System.Net;
 using System.Collections;
 using Newtonsoft.Json;
 
@@ -24,7 +23,7 @@ public class TCPClientWithDB : MonoBehaviour
 
     public class DBInfo
     {
-        public bool isConnected;
+        public string isConnected;
         public string plcData;
     }
     DBInfo dBInfo = new DBInfo();
@@ -192,7 +191,7 @@ public class TCPClientWithDB : MonoBehaviour
         while(isConnected)
         {
             string json = $"{{" +
-                $"\"isMasterConnected\":{isConnected}" + 
+                $"\"isConnected\":\"{isConnected}\"," + 
                 $"\"plcData\":\"{_lastReceivedResponse}\"" +
                 $"}}";
 
@@ -216,13 +215,17 @@ public class TCPClientWithDB : MonoBehaviour
 
                 json = snapShot.GetRawJsonValue();
 
+                print(json);
+
                 dBInfo = JsonConvert.DeserializeObject<DBInfo>(json);
             }
         });
 
-        yield return new WaitUntil(() => dBInfo.isConnected);
+        yield return new WaitUntil(() => $"{dBInfo.isConnected}" == "True");
 
-        while(dBInfo.isConnected)
+        isConnected = true;
+
+        while($"{dBInfo.isConnected}" == "True")
         {
             Task t = dbRef.GetValueAsync().ContinueWith(task =>
             {
@@ -232,14 +235,20 @@ public class TCPClientWithDB : MonoBehaviour
 
                     json = snapShot.GetRawJsonValue();
 
+                    print(json);
+
                     dBInfo = JsonConvert.DeserializeObject<DBInfo>(json);
                 }
             });
 
-            yield return new WaitUntil(() => t.IsCompleted);
+            //yield return new WaitUntil(() => t.IsCompleted);
+            yield return new WaitForSeconds(0.1f);
 
             ResponseData(dBInfo.plcData);
         }
+
+        isConnected = false;
+
 #endif
     }
 
