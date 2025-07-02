@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{53D49F91-838D-77F7-22F1-CAF77EB59EFB}</ProjectGuid>
+    <ProjectGuid>{F66FE254-E6D6-1905-32A3-E006F41958E1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Sensor.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\IK_toolkit\Scripts\AutomationController.cs" />
+    <Compile Include="Assets\Scripts\BulletinBoardManager.cs" />
     <Compile Include="Assets\IK_toolkit\Scripts\UIController.cs" />
     <Compile Include="Assets\Scripts\TCPClient.cs" />
     <Compile Include="Assets\Scripts\LibrarySystem.cs" />

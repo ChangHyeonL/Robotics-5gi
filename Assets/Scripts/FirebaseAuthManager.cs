@@ -6,6 +6,7 @@ using Firebase;
 using System.Net.Mail;
 using UnityEditor;
 using System.Collections;
+using Firebase.Database;
 
 // 1. 로그인: 이메일, 패스워드 입력시 회원가입 여부에 따라 로그인
 // 2. 회원가입: 이메일, 패스워드 입력 후 이메일 인증이 된다면, 회원가입 완료!
@@ -23,13 +24,14 @@ public class FirebaseAuthManager : MonoBehaviour
     public TMP_InputField signUpPasswordInput;
     public TMP_InputField signUpPasswordCheckInput;
 
+
     // class diagram
     // + Initialization(초기화)
     // + SignIn(로그인)
     // + SignUp(회원가입)
     // + SendVerificationEmail(이메일인증)
-    FirebaseAuth auth;
-    FirebaseUser user;
+    public FirebaseAuth auth;
+    public FirebaseUser user;
 
     private void Start()
     {
@@ -72,12 +74,12 @@ public class FirebaseAuthManager : MonoBehaviour
 
     public void SignIn()
     {
-        if(signInEmailInput.text == string.Empty)
+        if (signInEmailInput.text == string.Empty)
         {
             print("Please enter your email.");
             return;
         }
-        else if(signInPasswordInput.text == string.Empty)
+        else if (signInPasswordInput.text == string.Empty)
         {
             print("Please enter your password.");
             return;
@@ -105,13 +107,13 @@ public class FirebaseAuthManager : MonoBehaviour
 
     public void SignUp()
     {
-        if(signUpEmailInput.text == string.Empty || signUpPasswordInput.text == string.Empty || signUpPasswordCheckInput.text == string.Empty)
+        if (signUpEmailInput.text == string.Empty || signUpPasswordInput.text == string.Empty || signUpPasswordCheckInput.text == string.Empty)
         {
             print("Email or password or password check is empty.");
             return;
         }
 
-        if(signUpPasswordInput.text != signUpPasswordCheckInput.text)
+        if (signUpPasswordInput.text != signUpPasswordCheckInput.text)
         {
             print("Password is incorrect");
             return;
@@ -139,7 +141,7 @@ public class FirebaseAuthManager : MonoBehaviour
             {
                 print(task.Exception);
 
-                if(task.IsCompleted)
+                if (task.IsCompleted)
                 {
                     print("이메일을 확인하여 인증을 끝마쳐 주세요.");
                 }
@@ -161,14 +163,14 @@ public class FirebaseAuthManager : MonoBehaviour
 
     IEnumerator SignUp(string email, string password, string passwordCheck)
     {
-        if(email == "" || password == "" || passwordCheck == "")
+        if (email == "" || password == "" || passwordCheck == "")
         {
             print("이메일 또는 패스워드를 입력해 주세요.");
 
             yield break;
         }
 
-        if(password != passwordCheck)
+        if (password != passwordCheck)
         {
             print("비밀번호와 확인비밀번호가 같지 않습니다. 다시 확인 후 진행해 주세요.");
 
@@ -179,12 +181,12 @@ public class FirebaseAuthManager : MonoBehaviour
 
         yield return new WaitUntil(() => task.IsCompleted == true);
 
-        if(task.Exception != null)
+        if (task.Exception != null)
         {
             FirebaseException e = task.Exception.GetBaseException() as FirebaseException;
             AuthError authError = (AuthError)e.ErrorCode;
 
-            switch(authError)
+            switch (authError)
             {
                 case AuthError.InvalidEmail:
                     print("유효하지 않은 이메일 입니다.");
@@ -237,7 +239,7 @@ public class FirebaseAuthManager : MonoBehaviour
 
     IEnumerator SignIn(string email, string password)
     {
-        if(email == "" || password == "")
+        if (email == "" || password == "")
         {
             print("이메일 또는 패스워드를 입력해 주세요.");
         }
@@ -248,7 +250,7 @@ public class FirebaseAuthManager : MonoBehaviour
 
         user = auth.CurrentUser;
 
-        if(user.IsEmailVerified)
+        if (user.IsEmailVerified)
         {
             print("로그인이 완료되었습니다.");
             signInPanel.SetActive(false);
@@ -259,3 +261,6 @@ public class FirebaseAuthManager : MonoBehaviour
         }
     }
 }
+
+
+
