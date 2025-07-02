@@ -1,4 +1,4 @@
-#define UNITY_MASTER // UNITY_SLAVE 전처리기: 빌드 시 코드를 선택할 수 있는 기능
+#define UNITY_SLAVE // UNITY_MASTER or UNITY_SLAVE 전처리기: 빌드 시 코드를 선택할 수 있는 기능
 
 using System;
 using System.Collections.Generic;
@@ -179,6 +179,7 @@ public class TCPClientWithDB : MonoBehaviour
         while(isConnected)
         {
             string json = $"{{" +
+                $"\"isMasterConnected\":{isConnected}" + 
                 $"\"plcData\":\"{_lastReceivedResponse}\"" +
                 $"}}";
 
