@@ -13,6 +13,7 @@ using Firebase;
 using Firebase.Database;
 using System.Net;
 using System.Collections;
+using Newtonsoft.Json;
 
 // TCPSever(콘솔프로그램)와 함께 사용하는 TCPClient + Firebase Realtime Database
 // * 주의사항:  TCPSever를 먼저 켠 후에 실행해 주세요.
@@ -20,6 +21,13 @@ public class TCPClientWithDB : MonoBehaviour
 {
     public string dbUrl;
     DatabaseReference dbRef;
+
+    public class DBInfo
+    {
+        public bool isConnected;
+        public string plcData;
+    }
+    DBInfo dBInfo = new DBInfo();
 
     // 네트워크 통신은 별도 스레드, Unity 오브젝트 조작은 메인 스레드에서 하므로
     // 두 스레드 간에 데이터를 안전하게 주고받기 위한 장치가 필요
@@ -77,6 +85,7 @@ public class TCPClientWithDB : MonoBehaviour
     // 연결 시작 
     private void StartConnection()
     {
+#if UNITY_MASTER
         // 이미 연결 시도 중이거나 연결된 상태면 중복 실행 방지
         if (_communicationTask != null && !_communicationTask.IsCompleted)
         {
@@ -89,6 +98,9 @@ public class TCPClientWithDB : MonoBehaviour
         // 데이터 전송용 스레드 시작
         _communicationTask = Task.Run(() => InitializeClient(_cts.Token));
 
+#elif UNITY_SLAVE
+
+#endif
         StartCoroutine(UpdateToDataBase());
     }
 
@@ -174,6 +186,7 @@ public class TCPClientWithDB : MonoBehaviour
     /// <exception cref="NotImplementedException"></exception>
     private IEnumerator UpdateToDataBase()
     {
+#if UNITY_MASTER
         yield return new WaitUntil(() => isConnected);
 
         while(isConnected)
@@ -193,6 +206,41 @@ public class TCPClientWithDB : MonoBehaviour
 
             yield return new WaitUntil(() => t.IsCompleted);
         }
+#elif UNITY_SLAVE
+        string json = "";
+        dbRef.GetValueAsync().ContinueWith(task =>
+        {
+            if(task.IsCompleted)
+            {
+                DataSnapshot snapShot = task.Result;
+
+                json = snapShot.GetRawJsonValue();
+
+                dBInfo = JsonConvert.DeserializeObject<DBInfo>(json);
+            }
+        });
+
+        yield return new WaitUntil(() => dBInfo.isConnected);
+
+        while(dBInfo.isConnected)
+        {
+            Task t = dbRef.GetValueAsync().ContinueWith(task =>
+            {
+                if (task.IsCompleted)
+                {
+                    DataSnapshot snapShot = task.Result;
+
+                    json = snapShot.GetRawJsonValue();
+
+                    dBInfo = JsonConvert.DeserializeObject<DBInfo>(json);
+                }
+            });
+
+            yield return new WaitUntil(() => t.IsCompleted);
+
+            ResponseData(dBInfo.plcData);
+        }
+#endif
     }
 
     private void ResponseData(string response)
