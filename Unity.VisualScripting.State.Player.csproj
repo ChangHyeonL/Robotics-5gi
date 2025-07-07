@@ -10,10 +10,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F66FE254-E6D6-1905-32A3-E006F41958E1}</ProjectGuid>
+    <ProjectGuid>{FF09CCCA-748F-0747-A157-781868F981D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Unity.VisualScripting.State</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -22,8 +22,8 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_6000_0_42;UNITY_6000_0;UNITY_6000;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_2023_2_OR_NEWER;UNITY_2023_3_OR_NEWER;UNITY_6000_0_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_NAVIGATION_OFFMESHLINK_TO_NAVMESHLINK;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;TEXTCORE_1_0_OR_NEWER;EDITOR_ONLY_NAVMESH_BUILDER_DEPRECATED;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_AMD;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_USES_EXPLICIT_MEMORY_MANAGER_INITIALIZER;PLATFORM_SUPPORTS_WAIT_FOR_PRESENTATION;PLATFORM_SUPPORTS_SPLIT_GRAPHICS_JOBS;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <OutputPath>Temp\bin\Debug\Player\</OutputPath>
+    <DefineConstants>UNITY_6000_0_42;UNITY_6000_0;UNITY_6000;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_2023_2_OR_NEWER;UNITY_2023_3_OR_NEWER;UNITY_6000_0_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_NAVIGATION_OFFMESHLINK_TO_NAVMESHLINK;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;TEXTCORE_1_0_OR_NEWER;EDITOR_ONLY_NAVMESH_BUILDER_DEPRECATED;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_AMD;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_USES_EXPLICIT_MEMORY_MANAGER_INITIALIZER;PLATFORM_SUPPORTS_WAIT_FOR_PRESENTATION;PLATFORM_SUPPORTS_SPLIT_GRAPHICS_JOBS;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169;USG0001</NoWarn>
@@ -61,538 +61,328 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\SlerpRotation.cs" />
-    <Compile Include="Assets\Scripts\MPS\MxComponent.cs" />
-    <Compile Include="Assets\Scripts\CubeManager1.cs" />
-    <Compile Include="Assets\Scripts\MPS\Sensor.cs" />
-    <Compile Include="Assets\Scripts\FirebaseDBEx.cs" />
-    <Compile Include="Assets\Scripts\FirebaseAuthManager.cs" />
-    <Compile Include="Assets\Scripts\CubeManager.cs" />
-    <Compile Include="Assets\Scripts\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\MPS\TowerManager.cs" />
-    <Compile Include="Assets\IK_toolkit\Scripts\AutomationController.cs" />
-    <Compile Include="Assets\Scripts\BulletinBoardManager.cs" />
-    <Compile Include="Assets\IK_toolkit\Scripts\UIController.cs" />
-    <Compile Include="Assets\Scripts\LibrarySystem.cs" />
-    <Compile Include="Assets\IK_toolkit\Scripts\IK_toolkit.cs" />
-    <Compile Include="Assets\Scripts\MovementEx.cs" />
-    <Compile Include="Assets\Scripts\MPS\TCPClientWithDB.cs" />
-    <Compile Include="Assets\Scripts\RayCamera.cs" />
-    <Compile Include="Assets\Scripts\LerpMovement2.cs" />
-    <Compile Include="Assets\Scripts\MPS\Conveyor.cs" />
-    <Compile Include="Assets\Scripts\MovementEx2.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\MPS\TCPClient.cs" />
-    <Compile Include="Assets\Scripts\NavAgent.cs" />
-    <Compile Include="Assets\Scripts\LampManager.cs" />
-    <Compile Include="Assets\Scripts\LerpRotation.cs" />
-    <Compile Include="Assets\Scripts\LerpMovement.cs" />
-    <Compile Include="Assets\Scripts\MovePlayer.cs" />
-    <Compile Include="Assets\Scripts\MPS\Dragger.cs" />
-    <Compile Include="Assets\Scripts\MPS\Gripper.cs" />
-    <Compile Include="Assets\Scripts\MPS\Cylinder.cs" />
-    <Compile Include="Assets\Scripts\MPS\FirebaseAuthManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Properties\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\IStateDebugData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateGraphData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\FlowState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\State.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateExitReason.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\IStateTransition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\INesterStateTransition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\FlowStateTransition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Framework\Graph\HasStateGraph.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\TriggerStateTransition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\OnEnterState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\NesterState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Units\GetStateGraphs.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateTransition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\IState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateGraph.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\SuperState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateMachine.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateGraphAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateEventHooks.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\IStateTransitionDebugData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\NesterStateTransition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Units\SetStateGraph.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\AnyState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateUnit.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\OnExitState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\INesterState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Units\StateGraphContainerType.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\StateEnterReason.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Units\GetStateGraph.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
-    <None Include="Assets\Firebase\Plugins\x86_64\FirebaseCppDatabase.dll" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\Firebase\Plugins\Firebase.App.dll" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\Firebase\Plugins\x86_64\FirebaseCppAuth.dll" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\Firebase\Plugins\Firebase.TaskExtension.dll" />
-    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
-    <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
-    <None Include="Assets\Firebase\Plugins\Firebase.Auth.dll" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\Firebase\Plugins\Firebase.Database.dll" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\Firebase\Plugins\x86_64\FirebaseCppApp-12_10_1.dll" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\Firebase\Plugins\Firebase.Platform.dll" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-database-unity\maven-metadata.xml" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\Firebase\Plugins\Google.MiniJson.dll" />
-    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Library\PackageCache\com.unity.visualscripting@1b53f46e931b\Runtime\VisualScripting.State\Unity.VisualScripting.State.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.AIModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.AIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ARModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.ARModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.ARModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AccessibilityModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.AccessibilityModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AndroidJNIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.AndroidJNIModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.AnimationModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.AudioModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.ClothModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ClusterInputModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ClusterRendererModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ContentLoadModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.ContentLoadModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.ContentLoadModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CrashReportingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.CrashReportingModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.DSPGraphModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.DSPGraphModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.DirectorModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.DirectorModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.DirectorModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.GIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.GIModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.GIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.GameCenterModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.GameCenterModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.GameCenterModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.GraphicsStateCollectionSerializerModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.GraphicsStateCollectionSerializerModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.GraphicsStateCollectionSerializerModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.GridModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.GridModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.GridModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.HierarchyCoreModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.HierarchyCoreModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.HierarchyCoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.HotReloadModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.HotReloadModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.HotReloadModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.InputModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.InputModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.InputModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.InputForUIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.InputForUIModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.InputForUIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.LocalizationModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.LocalizationModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.LocalizationModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.MarshallingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.MarshallingModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.MarshallingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.MultiplayerModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.MultiplayerModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.MultiplayerModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.PerformanceReportingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.PhysicsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.Physics2DModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.Physics2DModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.PropertiesModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.PropertiesModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.PropertiesModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ScreenCaptureModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ShaderVariantAnalyticsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.ShaderVariantAnalyticsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.ShaderVariantAnalyticsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SharedInternalsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SpriteShapeModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.StreamingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.StreamingModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.StreamingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SubstanceModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.SubstanceModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.SubstanceModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.SubsystemsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.SubsystemsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TLSModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.TLSModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.TLSModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TerrainModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.TerrainModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TerrainPhysicsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextCoreFontEngineModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextCoreTextEngineModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TilemapModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.TilemapModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.TilemapModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UIElementsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UmbraModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UmbraModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UmbraModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityConnectModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UnityConnectModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityCurlModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UnityCurlModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UnityCurlModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityTestProtocolModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VFXModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.VFXModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.VFXModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VRModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.VRModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.VRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VehiclesModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.VehiclesModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.VehiclesModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.VideoModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.VirtualTexturingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.VirtualTexturingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.WindModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.XRModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEngine.XRModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.AccessibilityModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.AccessibilityModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.AdaptivePerformanceModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.AdaptivePerformanceModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.BuildProfileModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.BuildProfileModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.CoreBusinessMetricsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.CoreBusinessMetricsModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.CoreModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.CoreModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.DeviceSimulatorModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.DeviceSimulatorModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.DiagnosticsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.DiagnosticsModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.EditorToolbarModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.EditorToolbarModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.EmbreeModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.EmbreeModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.GIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.GIModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.GraphViewModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.GraphViewModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.GraphicsStateCollectionSerializerModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.GraphicsStateCollectionSerializerModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.GridAndSnapModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.GridAndSnapModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.GridModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.GridModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.MultiplayerModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.MultiplayerModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.Physics2DModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.Physics2DModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.PhysicsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.PhysicsModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.PresetsUIModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.PresetsUIModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.PropertiesModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.PropertiesModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.QuickSearchModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.QuickSearchModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.SafeModeModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.SafeModeModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.SceneTemplateModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.SceneTemplateModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.SceneViewModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.SceneViewModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.ShaderFoundryModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.ShaderFoundryModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.SketchUpModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.SketchUpModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.SpriteMaskModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.SpriteMaskModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.SpriteShapeModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.SpriteShapeModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.SubstanceModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.SubstanceModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.TerrainModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.TerrainModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.TextCoreFontEngineModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreFontEngineModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.TextCoreTextEngineModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreTextEngineModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.TextRenderingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.TextRenderingModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.TilemapModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.TilemapModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.TreeModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.TreeModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UIAutomationModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.UIAutomationModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UIBuilderModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.UIBuilderModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UIElementsModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UIElementsSamplesModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsSamplesModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UmbraModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.UmbraModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UnityConnectModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.VFXModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.VFXModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.VideoModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.VideoModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.XRModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\Managed\UnityEngine\UnityEditor.XRModule.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.42f1-x86_64\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.XRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
@@ -628,11 +418,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@74deb55db2a0\Runtime\Newtonsoft.Json.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Mono.Cecil">
-      <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@d6f9955a5d5f\Mono.Cecil.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@74deb55db2a0\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Firebase.Platform">
@@ -1133,201 +919,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.InputSystem.ForUI.csproj">
-      <Project>{4B97461A-BCDF-C63B-5382-6BAAFB0E13D7}</Project>
-      <Name>Unity.InputSystem.ForUI</Name>
+    <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
+      <Project>{8AEA700E-76D6-0325-4164-CE0BD659C4EC}</Project>
+      <Name>Unity.VisualScripting.Core.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{705A2E7A-C721-A701-411E-AA6953A5FF61}</Project>
-      <Name>UnityEditor.UI</Name>
+    <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
+      <Project>{0552B2E9-63BB-1F02-F0CC-C5F2A1C15186}</Project>
+      <Name>Unity.VisualScripting.Flow.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Searcher.Editor.csproj">
-      <Project>{1ED12DF6-8B6C-B3DB-FAB1-E7300F514AD5}</Project>
-      <Name>Unity.Searcher.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{A6EAB24E-C25F-734A-7BD5-D9B7C7D3A2D6}</Project>
-      <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.csproj">
-      <Project>{462E5E38-1511-55B2-9978-19ACECE05FBC}</Project>
-      <Name>Unity.AI.Navigation</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
-      <Project>{7649B226-A37A-4E64-8676-69E2715F46B1}</Project>
-      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
-      <Project>{C46D9BA0-C059-4D21-F73C-5197D3AA18B0}</Project>
-      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Shared.csproj">
-      <Project>{7BE9F456-AFA3-C03C-89D6-3DF9F6D60065}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{31B7D026-70B7-6EFD-714C-FFAFE41AF2FF}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
-      <Project>{0F97550C-5572-CCB1-C6CD-AC46FF29B132}</Project>
-      <Name>Unity.ShaderGraph.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{D6B25EF1-BF35-D5C3-DCD9-47144D301D41}</Project>
-      <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.Shared.csproj">
-      <Project>{2C87ED6F-7185-A63B-D495-640000ADFCA5}</Project>
-      <Name>Unity.RenderPipelines.Core.Editor.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{1FC64161-2971-AB8B-1C53-075DD5B1BAEF}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{6AEEF183-423E-583C-E650-70F40B7A6D09}</Project>
-      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{0B18E789-277C-7CAA-9D0A-EBF7C999C319}</Project>
-      <Name>Unity.PlasticSCM.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Multiplayer.Center.Editor.csproj">
-      <Project>{6A172889-7069-2A15-60AE-BA8F4185B523}</Project>
-      <Name>Unity.Multiplayer.Center.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
-      <Project>{C7405C58-F9D1-C914-8D5E-D73D0F23C778}</Project>
-      <Name>Unity.Mathematics.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.csproj">
-      <Project>{23D47071-2FE1-6E11-7027-C2E3A7595831}</Project>
-      <Name>Unity.RenderPipelines.GPUDriven.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Collections.csproj">
-      <Project>{27DD22C5-7FE4-5C47-A874-1B32B70D966B}</Project>
-      <Name>Unity.Collections</Name>
-    </ProjectReference>
-    <ProjectReference Include="PPv2URPConverters.csproj">
-      <Project>{12B7E8CC-D980-F203-5F2B-B4144B45AB51}</Project>
-      <Name>PPv2URPConverters</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rendering.LightTransport.Editor.csproj">
-      <Project>{E338468D-5083-774E-C64B-CCF40E7203BF}</Project>
-      <Name>Unity.Rendering.LightTransport.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{BCB4BF37-660F-7E24-C4ED-DD22540CC56D}</Project>
-      <Name>Unity.VisualScripting.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.csproj">
-      <Project>{C5820227-7652-EF4E-44EA-A34F00BF3354}</Project>
-      <Name>Unity.RenderPipelines.Universal.Config.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
-      <Project>{4B3D4019-81E8-95D1-70F7-356AECDE34DA}</Project>
-      <Name>Unity.RenderPipelines.Universal.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Collections.Editor.csproj">
-      <Project>{7D555F33-830D-072A-DC08-A6091A8A333F}</Project>
-      <Name>Unity.Collections.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{24B42438-8302-2AAD-9E1A-5553CE768D56}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
-      <Project>{8CB98DE8-1667-DC8F-B438-E327C6805BEB}</Project>
-      <Name>Unity.VisualScripting.Shared.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{12FB5FCB-F156-751A-A566-630DFF56CC83}</Project>
-      <Name>Unity.VisualScripting.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Multiplayer.Center.Common.csproj">
-      <Project>{2C220411-BBD7-C365-3FC3-D1103592B199}</Project>
-      <Name>Unity.Multiplayer.Center.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.Updater.csproj">
-      <Project>{AE2776CD-7F49-0628-BD44-34E50B4D52D0}</Project>
-      <Name>Unity.AI.Navigation.Updater</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
-      <Project>{88F12909-6A34-9CEF-BB67-15D905B0F5AA}</Project>
-      <Name>Unity.VisualScripting.Flow.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{B13B475B-AA89-EE60-FFE5-2AF397882744}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{D5E7B83B-9A42-7EFF-2333-18FC89E3E172}</Project>
-      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
-      <Project>{55C0440D-49CD-2CD9-899D-6C915535E24E}</Project>
-      <Name>Unity.VisualScripting.State.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.Editor.csproj">
-      <Project>{1FDD545E-27FF-A2CF-FF3F-4FF8E87C61C0}</Project>
-      <Name>Unity.AI.Navigation.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{D3D2C1AD-77EE-9523-F84F-16954162C261}</Project>
-      <Name>Unity.Mathematics</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{495AD4DC-35B3-C784-E38C-153EAF57B288}</Project>
-      <Name>Unity.RenderPipelines.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{436A6BE2-744D-7FBA-6A32-8185AF21FD58}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.csproj">
-      <Project>{9C0E55B5-126F-D89D-D464-8FA1F87E7C73}</Project>
-      <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.Editor.ConversionSystem.csproj">
-      <Project>{1925A95F-919E-7CE8-BCF1-7C73F6D9FEED}</Project>
-      <Name>Unity.AI.Navigation.Editor.ConversionSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{268DA8E7-8A2C-78CC-A9F0-45FCA02B1481}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Burst.Editor.csproj">
-      <Project>{87A0C52D-16AE-E4AA-7765-1EBBB0F249F7}</Project>
-      <Name>Unity.Burst.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{DD031990-8DF1-3FF5-9C8F-9D7090F08D0B}</Project>
-      <Name>Unity.Burst</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{E2F4D8AA-2FDB-B2B6-FB5A-68D5A9FE3AFF}</Project>
-      <Name>Unity.VisualStudio.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{5D421CAD-4FFE-2316-3F0C-FE5625EC9050}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{A30C69AB-6579-9B40-8C91-424EF9D03584}</Project>
-      <Name>Unity.VisualScripting.Flow</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rendering.LightTransport.Runtime.csproj">
-      <Project>{BCFD63F5-C66B-1B81-D3DA-F6424523C34E}</Project>
-      <Name>Unity.Rendering.LightTransport.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{94144D50-3B73-9FEE-1BF4-0FE98D63D12E}</Project>
-      <Name>Unity.InputSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.2D.Runtime.csproj">
-      <Project>{EBE155C9-E31D-FF41-C19A-A8E6275F7BD8}</Project>
-      <Name>Unity.RenderPipelines.Universal.2D.Runtime</Name>
+    <ProjectReference Include="UnityEngine.UI.Player.csproj">
+      <Project>{445C87C5-DB62-93D9-BEF6-13DFEE951BB3}</Project>
+      <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
